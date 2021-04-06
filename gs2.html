@@ -10,11 +10,50 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="compare.css">
+        <script src="https://kit.fontawesome.com/0d0c94afa5.js" crossorigin="anonymous"></script>
     </head>
     <body>
-      
+        <input type="checkbox" id="check">
+        <label for="check">
+
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-less-than" id="cancel"></i>
+       
+        </label>
+   
         
+        <div class="sidebar">
+
+            <header> compare.com</header>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="gs1.html"><i class="fas fa-shopping-cart"></i>Grocery store 1</a></li>
+                <li><a href="gs2.html"><i class="fas fa-shopping-cart"></i>Grocery store 2</a></li>
+                <li><a href="gs3.html"><i class="fas fa-shopping-cart"></i>Grocery store 3</a></li>
+                <li><a href="healthyliving.html"><i class="fas fa-carrot"></i>Healthy living</a></li>
+                
+
+                
+            </ul>
+        
+
+     </div>
+
+     <h1>Grocery store 2</h1>
+     <br>
+     <br>
+
+     <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+          <form action="action_page.php">
+            <input type="text" placeholder="what are you looking for today?" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+
         <script src="" async defer></script>
     </body>
 </html>
