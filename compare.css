@@ -252,9 +252,7 @@ background:#f1f2f7;
         box-sizing: border-box;
       }
       
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
+    
       
       /* Style the header */
       left {
@@ -263,7 +261,7 @@ background:#f1f2f7;
         padding: 2px;
         width:70%;
         text-align: center;
-        font-size: 35px;
+        font-size: 25px;
         color: white;
         float:right;
         border-style: solid;
@@ -308,7 +306,7 @@ background:#f1f2f7;
       .ft{
       
       background-color: #ccc;
-        padding: 18px;
+        padding: 10px;
         text-align: center;
         width:30%;
         float:left;
