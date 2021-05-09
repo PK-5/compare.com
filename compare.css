@@ -146,6 +146,7 @@ h3{
 
 .headergs3{
     background-color: #D69165;
+    
 }
 
 .info{
@@ -153,6 +154,20 @@ h3{
   padding-right: 50px;
   padding-left: 50px;
   padding-bottom: 50px;
+}
+
+.head{
+  width: 100%;
+}
+
+.hl{
+  width: 100%;
+}
+
+.backgroundgs{
+
+  background-image: url() ;
+  width: 100%;
 }
 
 
