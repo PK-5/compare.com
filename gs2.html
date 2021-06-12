@@ -44,7 +44,7 @@
      <div class="headergs2">
       <br>
       <br>
-       <h1>Grocery store 2</h1>
+       <h1>Countdown</h1>
        <br>
        <br>
       </div>
@@ -73,10 +73,74 @@
       <br>
       <br>
       <h1 class="midtxt">Common Products</h1>
-      <div class="mid">
-      <img src="Blue.jpg">
+      <!-- Common Products-->
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://images.unsplash.com/photo-1549203477-cba29f1a7c8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=398&q=80" style="width:500px" height= 600px>
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img_snow_wide.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <br><br><br><br>
     </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549203477-cba29f1a7c8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=398&q=80" alt="Milk" style="width:100%">
+      <h1>Milk</h1>
+      <p class="price">$3.99</p>
+      <p>Some text about the Milk. MilkMilkMilkMilk
+          MilkMilkMilkMilkMilkMilkMilkMilkMilkMilk
+          MilkMilkMilkMilkMilkMilkMilkMilkMilk
+          MilkMilkMilkMilkMilkMilk</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+
+    <button class="open-button" onclick="openForm()">Survey</button>
+   
+
+
+   <div class="chat-popup" id="myForm">
+     
+       <h2>Quick survey<h2>
+   <br>
+      
+      
+       <h2 id="question"></h2>
+       <input id="answer" >
+       <button onclick="sFunction()">Next</button>
+       <br><br> <br><br> <br><br> <br><br>
+      
+   
+       
+     </form>
+
+    
+   </div>
 
         <script src="compare.js" async defer></script>
     </body>
