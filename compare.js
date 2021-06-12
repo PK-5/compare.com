@@ -1,22 +1,4 @@
 
-//swap the product
-
-//defining variables
-var imagelist = ["img1", "img 2", "img3"];
-let number = 0;
-
-//making a loop
-
-for (let i = 0; i < imagelist.length; i++) {
-  task(i);  
-}
-
-function task(i) {
-    setTimeout(function() {
-        console.log(imagelist[number]);
-        number +=1;
-    }, 2000 * i);
-}
 
 
 //Common products slideshow
