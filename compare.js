@@ -1,8 +1,9 @@
 
  //swap
  const Swap = document.querySelector("#swap") //defining the variable Swap
- var imagelist = ["img1","img2"]; // making a imageList 
+ var imagelist = [image1,"img2"]; // making a imageList 
  
+ var image1 = document.getElementById("image1")
 
  let time = 0; // defining time
   for (let i=0; i<imagelist.length; i++) {// move number up by one 
@@ -18,7 +19,7 @@
    }
  
    //extra
-
+   
    
 
    //Common products slideshow
