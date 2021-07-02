@@ -1,28 +1,20 @@
 
  //swap
- const Swap = document.querySelector("#swap") //defining the variable Swap
- var imagelist = [image1,"img2"]; // making a imageList 
- 
- var image1 = document.getElementById("image1")
 
- let time = 0; // defining time
-  for (let i=0; i<imagelist.length; i++) {// move number up by one 
+const Change= document.querySelector("#change"); //defining the variable Swap
+let time = 0; // defining time   
+let imagelist = ["icecream.jpg","smoothie.jpg"]
+for (let i=0; i<imagelist.length; i++) {// move number up by one 
  task(i); 
  }
  function task(i) {
    setTimeout(function() {
-     let text = "" // defining text
-     text+=(imagelist[time]); // telling what text should equal
-     Swap.innerHTML = text; // telling where to show the text
+     Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
    }, 2000 * i);// when to change
    }
  
-   //extra
-   
-   
-
-   //Common products slideshow
+  //Common products slideshow
 
 var slideIndex = 1; //defining the varaible slide index
 showSlides(slideIndex);
