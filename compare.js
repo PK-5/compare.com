@@ -48,7 +48,8 @@ function showSlides(n) { //writing out the function showSlides
 
   // Defining Question, questionsList and Answer
 const Question = document.querySelector("#question");
-const questionList = ["What is your name" , " there are product you want on this website that we are missing", "thank you for your feedback", ""]
+ 
+const questionList = ["What is your name ? " , "  hi, is there are product you want on this website that we are missing ? ", "  , we will be sure to look into adding that "]
 const Answer = document.querySelector("answer")
 
   
@@ -61,18 +62,31 @@ function openForm() { // opens the form or shows it
   }
 
   var number = 0;   // creating a variable called number that is = to 0
-  let text =  questionList [number] + "?";  // defining text 
+  var Button = document.getElementById("next")
+  let text =  questionList [number] ;  // defining text 
   Question.innerHTML = text; // Telling where the text is displayed
   text ="" // Clearing the Question before moving onto the next one  
 
 function sFunction(){ //telling the function sFunction what to do 
   number += 1 ; // telling number to increase by 1
   var user = document.querySelector("#answer").value; //creating a variable called user
-  text += "Hi " + user + " is" + questionList [number] + "?"; // stating what text should be
+  text += user  +  questionList [number] ; // stating what text should be
   Question.innerHTML = text; //stating where the text should be
  text =""// emptying the question field 
- // block submit button
+ let end = "Thank you for your feedback"
+ 
+ if (number > 2){ 
+   Question.innerHTML = end; 
+   Button.style.display = "none";
+} else { Question.innerhtml = text ;
+}
+ 
 
+  
+ 
+
+ 
+ // block submit button
  //function submitFunction(){
  // number += 1
  // var user = document.querySelector("#answer").value;
@@ -82,8 +96,7 @@ function sFunction(){ //telling the function sFunction what to do
 
  }
 
- if (number > 3){number = 4} ;{
-}
+
 
 
 
