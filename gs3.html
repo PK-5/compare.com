@@ -119,7 +119,7 @@
     <p><button>Add to Cart</button></p>
   </div>
 
-    <button class="open-button" onclick="openForm()">Survey</button>
+    <button id="survey" class="open-button" onclick="openForm()">Survey</button>
    
 
 
@@ -131,9 +131,9 @@
       
        <h2 id="question"></h2>
        <input id="answer" onfocus="this.value=''" >
-       <button id="next" onclick= "sFunction()"  >Next</button>
-       <button id= "close" onclick="closeForm()" >Close</button>
-       <br><br> <br><br> <br><br> <br><br>
+       <button id="next" onclick= "sFunction()">Next</button>
+       <a id= "close" onclick="closeForm()"><i class="fas fa-times"></i></a>
+       <br> <br> <br><br> <br><br> <br><br>
       
    
        
