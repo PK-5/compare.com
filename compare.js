@@ -15,7 +15,7 @@ for (let i=0; i<imagelist.length; i++) {// move number up by one
    }
  
   //Common products slideshow
-
+  
 var slideIndex = 1; //defining the varaible slide index
 showSlides(slideIndex);
   
@@ -57,8 +57,9 @@ function openForm() { // opens the form or shows it
     document.getElementById("myForm").style.display = "block";
 
 }
-  function closeForm() { // closes the form or hides it
+  function closeForm() { // closes the form or hides its
     document.getElementById("myForm").style.display = "none";
+    document.getElementById("survey").style.display = "none";
   }
 
   var number = 0;   // creating a variable called number that is = to 0
@@ -79,29 +80,10 @@ function sFunction(){ //telling the function sFunction what to do
    Question.innerHTML = end; 
    Button.style.display = "none";
 } else { Question.innerhtml = text ;
+  }
 }
- 
 
-  
- 
-
- 
- // block submit button
- //function submitFunction(){
- // number += 1
- // var user = document.querySelector("#answer").value;
- // text += "Hi " + user + " is" + questionList [number] + "?"; // stating what text should be
- // Question.innerHTML = text; 
+function searchFunction(){
 
 
- }
-
-
-
-
-
-  
-
-
- 
-  
+}
