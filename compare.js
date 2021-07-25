@@ -75,6 +75,10 @@ function sFunction(){ //telling the function sFunction what to do
   Question.innerHTML = text; //stating where the text should be
  text =""// emptying the question field 
  let end = "Thank you for your feedback"
+ var Vanish = document.querySelector("#answer");
+ Vanish.value = '' ;
+
+
  
  if (number > 2){ 
    Question.innerHTML = end; 
