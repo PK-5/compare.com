@@ -3,7 +3,7 @@
 
 const Change= document.querySelector("#change"); //defining the variable Swap
 let time = 0; // defining time   
-let imagelist = ["icecream.jpg","smoothie.jpg"]
+let imagelist = ["alt1.jpg","alt2.jpg"]
 for (let i=0; i<imagelist.length; i++) {// move number up by one 
  task(i); 
  }
@@ -11,7 +11,7 @@ for (let i=0; i<imagelist.length; i++) {// move number up by one
    setTimeout(function() {
      Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
-   }, 2000 * i);// when to change
+   }, 60000 * i);// when to change
    }
  
   //Common products slideshow
@@ -69,6 +69,7 @@ function openForm() { // opens the form or shows it
   text ="" // Clearing the Question before moving onto the next one  
 
 function sFunction(){ //telling the function sFunction what to do 
+
   number += 1 ; // telling number to increase by 1
   var user = document.querySelector("#answer").value; //creating a variable called user
   text += user  +  questionList [number] ; // stating what text should be
@@ -78,13 +79,13 @@ function sFunction(){ //telling the function sFunction what to do
  var Vanish = document.querySelector("#answer");
  Vanish.value = '' ;
 
-
- 
  if (number > 2){ 
    Question.innerHTML = end; 
    Button.style.display = "none";
 } else { Question.innerhtml = text ;
   }
+
+
 }
 
 function searchFunction(){

@@ -538,3 +538,8 @@ img {vertical-align: middle;}
 width: 5cm;
 height: 5cm;
 }
+
+/* Border for alternative foods */
+.solid{
+  border-style: solid;
+}
