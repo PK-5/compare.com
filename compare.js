@@ -11,7 +11,7 @@ for (let i=0; i<imagelist.length; i++) {// move number up by one
    setTimeout(function() {
      Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
-   }, 60000 * i);// when to change
+   }, 86400000 * i);// when to change
    }
  
   //Common products slideshow
