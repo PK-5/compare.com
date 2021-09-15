@@ -557,6 +557,36 @@ height: 5cm;
   background-color: blanchedalmond;
 }
 
+/* yes button */
+
+.yes{
+  background-color: white;
+  font-size: 15px;
+  padding: 10px 28px;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.6s;
+}
+
+.yes:hover{
+  background-color: blanchedalmond;
+}
+
+/* no button */
+.no{
+  background-color: white;
+  font-size: 15px;
+  padding: 10px 28px;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.6s;
+}
+
+.no:hover{
+  background-color: blanchedalmond;
+}
+
+
 /*close buttom */
 .fa-times{
  color:rgb(129, 5, 5);
@@ -568,13 +598,22 @@ height: 5cm;
 .fa-times:hover{
   color:  rgb(212, 0, 0);
 }
+/* Input feild */
 .input{
   width: 30% ;
   padding: 10px;
 }
 
-/* Input feild */
 
+/*Question 2 yes and no buttons */
+
+.more{
+  padding-left: 10px;
+  text-align: left;
+  padding-bottom: 2px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
 
 /* Borders */
 /*alt food */
