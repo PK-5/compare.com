@@ -49,12 +49,19 @@ function showSlides(n) { //writing out the function showSlides
   // Defining Question, questionsList and Answer
 const Question = document.querySelector("#question");
  
-const questionList = ["What is your name ? " , "  hi, is there are product you want on this website that we are missing ? ", "  , we will be sure to look into adding that "]
-const Answer = document.querySelector("answer")
+const questionList = ["What is your name ? " , "  hi, is there are product we are missing? ", "  , we will be sure to look into adding that "]
+const Answer = document.querySelector("#answer")
+const Yes = document.querySelector("#yes")
+const No = document.querySelector("#no")
+const Next = document.querySelector("#next")
 
   
 function openForm() { // opens the form or shows it
     document.getElementById("myForm").style.display = "block";
+    Yes.style.display = "none";
+    No.style.display = "none";
+    document.getElementById('answerr').style.display="none"
+    
 
 }
   function closeForm() { // closes the form or hides its
@@ -68,6 +75,8 @@ function openForm() { // opens the form or shows it
   Question.innerHTML = text; // Telling where the text is displayed
   text ="" // Clearing the Question before moving onto the next one  
 
+
+
 function sFunction(){ //telling the function sFunction what to do 
 
   number += 1 ; // telling number to increase by 1
@@ -79,6 +88,20 @@ function sFunction(){ //telling the function sFunction what to do
  var Vanish = document.querySelector("#answer");
  Vanish.value = '' ;
 
+if (number = 1) {
+  Answer.style.display = "none";
+  Next.style.display = "none";
+  Yes.style.display="block";
+  No.style.display="block";
+
+} else { 
+  Answer.style.display = "block";
+  Next.style.display = "block";
+  Yes.style.display="none";
+  No.style.display="none";
+
+}
+
  if (number > 2){ 
    Question.innerHTML = end; 
    Button.style.display = "none";
@@ -88,7 +111,31 @@ function sFunction(){ //telling the function sFunction what to do
 
 }
 
-function searchFunction(){
 
+function yesFunction(){
+  const More = document.querySelector("#more");
+  const Answerr = document.getElementById('answerr');
+  Question.style.display = "none";
+  Answerr.style.display = "block";
+  let ttext = "What are we missing?";
+  More.innerHTML = ttext;
+  Yes.style.display = "none";
+  No.style.display = "none";
+  Next.style.display = "block";
+
+  
+
+}
+
+function noFunction(){
+  const More = document.querySelector("#more");
+  const Answerr = document.getElementById('answerr');
+  Question.style.display = "none";
+  Answerr.style.display = "block";
+  let ttext = "What else could we improve on?";
+  More.innerHTML = ttext;
+  Yes.style.display = "none";
+  No.style.display = "none";
+  Next.style.display = "block";
 
 }
