@@ -127,6 +127,7 @@ html{
 
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 h1{
@@ -505,6 +506,7 @@ img {vertical-align: middle;}
     position:absolute;
     right: 100px;
     width: 200px;
+    
   }
 
   /* The popup chat - hidden by default */
