@@ -1,9 +1,9 @@
 /* navbar*/
-.sidebar {
 
+.sidebar {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
- }
+}
+ 
 
 
 
@@ -13,8 +13,6 @@
     list-style: none;
     text-decoration: none;
 }
-
-
 
 .sidebar {
     position: fixed;
@@ -35,6 +33,18 @@
     line-height: 113px;
     background: #d2b48cad;
     user-select: none;
+}
+
+@media screen and (max-width:700px){
+  .sidebar{
+   width: 100%;
+   height: auto;
+   position: relative;
+  }
+
+  .sidebar a {float: left;}
+  div.content{margin-left: 0;}
+  
 }
 
 .sidebar ul a {
@@ -96,6 +106,7 @@ label #cancel {
      color:white;
      padding: 4px 9px;
      transition: all .5s ease;
+     position: fixed;
 
 }
 
@@ -117,6 +128,8 @@ label #cancel {
     left: 195px;
 
 }
+
+
 /* Body */
 
 html{
@@ -169,11 +182,15 @@ h3{
 }
 
 .head{
-  width: 100%;
+  max-width: 100%;
 }
 
 .hl{
-  width: 100%;
+  max-width: 100%;
+}
+
+.dotted{
+  max-width: 100%;
 }
 
 .thingbob{
@@ -493,6 +510,7 @@ img {vertical-align: middle;}
 
 .chat-popup{
   background-color: rgb(167, 104, 79);
+  
  }
 
 
@@ -527,11 +545,10 @@ img {vertical-align: middle;}
 
 /* Add styles to the form container */
 .form-container {
-  width: 300px;
-  max-width: 300px;
-  padding: 10px;
-  background-color: rgb(116, 116, 116);
- ;
+    width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    background-color: rgb(116, 116, 116);
 }
 
 /* When the textarea gets focus, do something */
@@ -554,6 +571,7 @@ height: 5cm;
   border-radius: 8px;
   border: none;
   transition-duration: 0.6s;
+
 }
 
 .qnext:hover{
@@ -562,32 +580,22 @@ height: 5cm;
 
 /* yes button */
 
-.yes{
+.yes, .no{
   background-color: white;
   font-size: 15px;
   padding: 10px 28px;
   border-radius: 8px;
   border: none;
   transition-duration: 0.6s;
+  float: left;  
+  margin-left: 5px;
+ 
 }
 
-.yes:hover{
+.yes:hover, .no:hover{
   background-color: blanchedalmond;
 }
 
-/* no button */
-.no{
-  background-color: white;
-  font-size: 15px;
-  padding: 10px 28px;
-  border-radius: 8px;
-  border: none;
-  transition-duration: 0.6s;
-}
-
-.no:hover{
-  background-color: blanchedalmond;
-}
 
 
 /*close buttom */
@@ -608,15 +616,7 @@ height: 5cm;
 }
 
 
-/*Question 2 yes and no buttons */
 
-.more{
-  padding-left: 10px;
-  text-align: left;
-  padding-bottom: 2px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 30px;
-}
 
 /* Borders */
 /*alt food */
@@ -630,4 +630,6 @@ height: 5cm;
   
   border-style: double;
 }
+
+/* responsive healthy living page */
 

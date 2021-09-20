@@ -47,95 +47,97 @@ function showSlides(n) { //writing out the function showSlides
 //Popup survey
 
   // Defining Question, questionsList and Answer
-const Question = document.querySelector("#question");
+  const Question = document.querySelector("#question");
  
-const questionList = ["What is your name ? " , "  hi, is there are product we are missing? ", "  , we will be sure to look into adding that "]
-const Answer = document.querySelector("#answer")
-const Yes = document.querySelector("#yes")
-const No = document.querySelector("#no")
-const Next = document.querySelector("#next")
+  const questionList = ["What is your name ? " , "  hi, is there are product we are missing? ", "  , we will be sure to look into adding that "]
+  const Answer = document.querySelector("#answer")
+  const Yes = document.querySelector("#yes")
+  const No = document.querySelector("#no")
+  const Next = document.querySelector("#next")
+ 
+  
+    
+  function openForm() { // opens the form or shows it
+      document.getElementById("myForm").style.display = "block";
+      Yes.style.display = "none";
+      No.style.display = "none";
+      Question.innerHTML = "What is your name ? " //stating where the text should be
+      
+
+      
+  
+  }
+    function closeForm() { // closes the form or hides its
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("survey").style.display = "none";
+    }
+  
 
   
-function openForm() { // opens the form or shows it
-    document.getElementById("myForm").style.display = "block";
+  //Question 2
+  
+  function sFunction(){ //telling the function sFunction what to do 
+    var user = document.querySelector("#answer").value; //creating a variable called user
+    Question.innerHTML = "Hi " + user + ", is there are product we are missing?" //stating where the text should be
+    Yes.style.display = "block";
+    No.style.display = "block";
+    Answer.style.display = "none";
+    Next.style.display = "none";
+    Next.setAttribute("onClick", "javascript: nFunction();");
+    Answer.value = " "
+   
+  }
+
+  function yesFunction(){
+    Question.innerHTML = "What we are missing?" //stating where the text should be
     Yes.style.display = "none";
     No.style.display = "none";
-    document.getElementById('answerr').style.display="none"
-    
-
-}
-  function closeForm() { // closes the form or hides its
-    document.getElementById("myForm").style.display = "none";
-    document.getElementById("survey").style.display = "none";
-  }
-
-  var number = 0;   // creating a variable called number that is = to 0
-  var Button = document.getElementById("next")
-  let text =  questionList [number] ;  // defining text 
-  Question.innerHTML = text; // Telling where the text is displayed
-  text ="" // Clearing the Question before moving onto the next one  
-
-
-
-function sFunction(){ //telling the function sFunction what to do 
-
-  number += 1 ; // telling number to increase by 1
-  var user = document.querySelector("#answer").value; //creating a variable called user
-  text += user  +  questionList [number] ; // stating what text should be
-  Question.innerHTML = text; //stating where the text should be
- text =""// emptying the question field 
- let end = "Thank you for your feedback"
- var Vanish = document.querySelector("#answer");
- Vanish.value = '' ;
-
-if (number = 1) {
-  Answer.style.display = "none";
-  Next.style.display = "none";
-  Yes.style.display="block";
-  No.style.display="block";
-
-} else { 
-  Answer.style.display = "block";
-  Next.style.display = "block";
-  Yes.style.display="none";
-  No.style.display="none";
-
-}
-
- if (number > 2){ 
-   Question.innerHTML = end; 
-   Button.style.display = "none";
-} else { Question.innerhtml = text ;
-  }
-
-
-}
-
-
-function yesFunction(){
-  const More = document.querySelector("#more");
-  const Answerr = document.getElementById('answerr');
-  Question.style.display = "none";
-  Answerr.style.display = "block";
-  let ttext = "What are we missing?";
-  More.innerHTML = ttext;
-  Yes.style.display = "none";
-  No.style.display = "none";
-  Next.style.display = "block";
+    Next.style.display = "block";
+    Answer.style.display = "block";
 
   
 
-}
+  
+  }
+  
+  function noFunction(){
+    Question.innerHTML = "What could we improve on?" //stating where the text should be
+    Yes.style.display = "none";
+    No.style.display = "none";
+    Next.style.display = "block";
+    Answer.style.display = "block";
+    setTimeout(fFunction, 2000);
+  
+  }
 
-function noFunction(){
-  const More = document.querySelector("#more");
-  const Answerr = document.getElementById('answerr');
-  Question.style.display = "none";
-  Answerr.style.display = "block";
-  let ttext = "What else could we improve on?";
-  More.innerHTML = ttext;
-  Yes.style.display = "none";
-  No.style.display = "none";
-  Next.style.display = "block";
+  //Question 3
 
-}
+  function nFunction(){ //telling the function sFunction what to do 
+    let user2 = document.querySelector("#answer").value;
+    Question.innerHTML = "We will be surely look into adding " + user2 //stating where the text should be
+    Answer.style.display = "none";
+    Next.style.display = "none"; 
+    setTimeout(lFunction, 2000);
+    Answer.value = " "
+   
+  }
+
+  function lFunction() {
+    Question.innerHTML = "Any other suggestions?" //stating where the text should be
+    Yes.style.display = "none";
+    No.style.display = "none";
+    Answer.style.display = "block";
+    Next.style.display = "block"
+    Next.setAttribute("onClick", "javascript: fFunction();");
+  
+
+  }
+
+  function fFunction() {
+    Question.innerHTML = "Thank you for your feedback"
+    Answer.style.display = "none";
+    Next.style.display = "none"; 
+  }
+
+
+ 
