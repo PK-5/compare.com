@@ -35,18 +35,6 @@
     user-select: none;
 }
 
-@media screen and (max-width:700px){
-  .sidebar{
-   width: 100%;
-   height: auto;
-   position: relative;
-  }
-
-  .sidebar a {float: left;}
-  div.content{margin-left: 0;}
-  
-}
-
 .sidebar ul a {
 
     display: block;
@@ -129,6 +117,57 @@ label #cancel {
 
 }
 
+/* Navbar for when the screen is smaller */
+
+
+
+.icon-bar {
+  width: 100%;
+  background-color:rgb(241, 241, 241);
+  ;
+  overflow: auto;
+  position: ;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.5s ease;
+  color: black;
+  font-size: 30px;
+}
+
+.icon-bar a:hover {
+  font-size:36px;
+ 
+}
+
+
+
+
+
+@media screen and (min-width:700px){
+  .icon-bar{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width:700px){
+  .sidebar{
+   display: none;
+  }
+  .icon-bar{
+    display: block;
+    float: left;
+  }label #btn, label #cancel
+  {
+    display: none;
+  }
+
+}
 
 /* Body */
 
