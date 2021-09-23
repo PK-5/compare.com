@@ -11,7 +11,7 @@ for (let i=0; i<imagelist.length; i++) {// move number up by one
    setTimeout(function() {
      Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
-   }, 86400000 * i);// when to change
+   }, 2000 * i);// when to change CHANGE BACK TO 24 HOURS AFTER TESTS
    }
  
   //Common products slideshow

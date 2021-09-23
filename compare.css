@@ -667,6 +667,7 @@ height: 5cm;
 .double {
   
   border-style: double;
+  z-index: 150;
 }
 
 /* responsive healthy living page */
