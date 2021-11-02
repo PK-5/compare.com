@@ -231,7 +231,7 @@ h3{
   max-width: 100%;
 }
 
-.thingbob{
+.bodyIndex{
 
   background-color:#F4EDE5  ;
 
@@ -241,7 +241,13 @@ h3{
   padding-top: none;
 }
 
+.surveyDesc{
+  padding-bottom: 0px;
+}
 
+.swap{
+  max-width: 100%;
+}
 
 /* Search bar */
 
@@ -426,55 +432,50 @@ background:#f1f2f7;
 
 /* Slideshow */
 
-* {box-sizing: border-box}
-body { margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
- 
-
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
+ width: 540px;
   position: relative;
   margin: auto;
+  padding-bottom: 0px;
   
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
+  position:absolute;
+  top: 30%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  padding: 20px;
+  margin-top: 0px;
   color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  background-color:rgba(255, 255, 255, 0.568);
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+
+
+/* On hover, add a white background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color:rgba(37, 36, 36, 0.466);
 }
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color:black;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
 }
@@ -496,12 +497,20 @@ img {vertical-align: middle;}
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-block; 
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
   background-color: #717171;
+}
+
+.mySlides {
+  width: 600px;
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

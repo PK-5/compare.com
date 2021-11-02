@@ -36,9 +36,6 @@ function showSlides(n) { //writing out the function showSlides
   for (i = 0; i < slides.length; i++) { // increase the slide.length by 1
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) { // increases the do.length and highlights the right dot
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block"; // shows the slide  
   dots[slideIndex-1].className += " active"; // keeps the dots in unison with the slides
 }
@@ -76,68 +73,70 @@ function showSlides(n) { //writing out the function showSlides
   
   //Question 2
   
-  function sFunction(){ //telling the function sFunction what to do 
-    var user = document.querySelector("#answer").value; //creating a variable called user
-    Question.innerHTML = "Hi " + user + ", is there are product we are missing?" //stating where the text should be
-    Yes.style.display = "block";
-    No.style.display = "block";
-    Answer.style.display = "none";
-    Next.style.display = "none";
-    Next.setAttribute("onClick", "javascript: nFunction();");
-    Answer.value = " "
-   
-  }
-
-  function yesFunction(){
-    Question.innerHTML = "What we are missing?" //stating where the text should be
-    Yes.style.display = "none";
-    No.style.display = "none";
-    Next.style.display = "block";
-    Answer.style.display = "block";
-
+ //Question 2
   
+ function sFunction(){ //telling the function sFunction what to do 
+  var user = document.querySelector("#answer").value; //creating a variable called user
+  Question.innerHTML = "Hi " + user + ", is there are product we are missing?" //stating where the text should be
+  Yes.style.display = "block";
+  No.style.display = "block";
+  Answer.style.display = "none";
+  Next.style.display = "none";
+  Next.setAttribute("onClick", "javascript: nFunction();");
+  Answer.value = " "
+ 
+}
 
-  
-  }
-  
-  function noFunction(){
-    Question.innerHTML = "What could we improve on?" //stating where the text should be
-    Yes.style.display = "none";
-    No.style.display = "none";
-    Next.style.display = "block";
-    Answer.style.display = "block";
-    setTimeout(fFunction, 2000);
-  
-  }
+function yesFunction(){
+  Question.innerHTML = "What we are missing?" //stating where the text should be
+  Yes.style.display = "none";
+  No.style.display = "none";
+  Next.style.display = "block";
+  Answer.style.display = "block";
 
-  //Question 3
 
-  function nFunction(){ //telling the function sFunction what to do 
-    let user2 = document.querySelector("#answer").value;
-    Question.innerHTML = "We will be surely look into adding " + user2 //stating where the text should be
-    Answer.style.display = "none";
-    Next.style.display = "none"; 
-    setTimeout(lFunction, 2000);
-    Answer.value = " "
-   
-  }
 
-  function lFunction() {
-    Question.innerHTML = "Any other suggestions?" //stating where the text should be
-    Yes.style.display = "none";
-    No.style.display = "none";
-    Answer.style.display = "block";
-    Next.style.display = "block"
-    Next.setAttribute("onClick", "javascript: fFunction();");
-  
 
-  }
+}
 
-  function fFunction() {
-    Question.innerHTML = "Thank you for your feedback"
-    Answer.style.display = "none";
-    Next.style.display = "none"; 
-  }
+function noFunction(){
+  Question.innerHTML = "What could we improve on?" //stating where the text should be
+  Yes.style.display = "none";
+  No.style.display = "none";
+  Next.style.display = "block";
+  Answer.style.display = "block";
+  setTimeout(fFunction, 2000);
+
+}
+
+//Question 3
+
+function nFunction(){ //telling the function sFunction what to do 
+  let user2 = document.querySelector("#answer").value;
+  Question.innerHTML = "We will be surely look into adding " + user2 //stating where the text should be
+  Answer.style.display = "none";
+  Next.style.display = "none"; 
+  setTimeout(lFunction, 2000);
+  Answer.value = " "
+ 
+}
+
+function lFunction() {
+  Question.innerHTML = "Any other suggestions?" //stating where the text should be
+  Yes.style.display = "none";
+  No.style.display = "none";
+  Answer.style.display = "block";
+  Next.style.display = "block"
+  Next.setAttribute("onClick", "javascript: fFunction();");
+
+
+}
+
+function fFunction() {
+  Question.innerHTML = "Thank you for your feedback"
+  Answer.style.display = "none";
+  Next.style.display = "none"; 
+}
 
 
  
