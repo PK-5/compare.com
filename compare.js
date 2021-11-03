@@ -5,6 +5,7 @@
   const Yes = document.querySelector("#yes")
   const No = document.querySelector("#no")
   const Next = document.querySelector("#next")
+  const Subquestion = document.querySelector("#subQuestion")
   
   //swap
 
@@ -54,8 +55,9 @@ function showSlides(n) { //writing out the function showSlides
     
   function openForm() { // opens the survey
       document.getElementById("myForm").style.display = "block"; //shows the survey
-      Yes.style.display = "none"; // telling Yes button to be hidden
-      No.style.display = "none";// telling No button to be hidden
+      Yes.style.display = "none"; // hiding Yes button 
+      No.style.display = "none";// hiding No button 
+      Subquestion.style.display = "none"// hiding subquestion text
       Question.innerHTML = "What is your name ? " //stating where the text should be
       
 
@@ -80,6 +82,7 @@ function showSlides(n) { //writing out the function showSlides
   No.style.display = "block"; // showing No button
   Answer.style.display = "none"; // hide Answer element
   Next.style.display = "none"; // hide Next element
+  Subquestion.style.display = "none"// hiding subquestion text
   Next.setAttribute("onClick", "javascript: nFunction();"); //directing it to which function to go to next
   Answer.value = " " // Telling Answer. value to be = to null
  
@@ -91,6 +94,7 @@ function yesFunction(){
   No.style.display = "none"; // hiding No button
   Next.style.display = "block"; // showing Next button
   Answer.style.display = "block";// Showing Answer element
+  Subquestion.style.display = "block"// showing subquestion text
   Answer.value = " " // Telling Answer. value to be = to null
 
 
@@ -103,6 +107,7 @@ function noFunction(){
   No.style.display = "none";  // hiding No button
   Next.style.display = "block";// showing Next button
   Answer.style.display = "block";// Showing Answer element
+  Subquestion.style.display = "block"// showing subquestion text
   Answer.value = " " // Telling Answer. value to be = to null
   Next.setAttribute("onClick", "javascript: lFunction();"); //directing it to which function to go to next
 
@@ -115,6 +120,7 @@ function nFunction(){ //telling the function sFunction what to do
   Question.innerHTML = "We will be surely look into adding " + user2 //stating where the text should be
   Answer.style.display = "none"; // hiding the Answer element
   Next.style.display = "none"; // hiding the Next button
+  Subquestion.style.display = "none"// hiding subquestion text
   setTimeout(lFunction, 2000);// Telling it to go to lFunction in 2 seconds
   Answer.value = " " // Telling Answer. value to be = to null
  
@@ -124,6 +130,7 @@ function lFunction() {
   Question.innerHTML = "Any other suggestions?" //stating where the text should be
   Yes.style.display = "none"; // hiding Yes function
   No.style.display = "none"; // hiding No function
+  Subquestion.style.display = "none"// hiding subquestion text
   Answer.style.display = "block"; // showing Answer element
   Next.style.display = "block" // showing Next button
   Answer.value = " " // Telling Answer. value to be = to null
@@ -136,6 +143,7 @@ function fFunction() {
   Question.innerHTML = "Thank you for your feedback" // showing text to display and where to display it
   Answer.style.display = "none"; // hiding Answer element
   Next.style.display = "none"; // hding Next element
+  Subquestion.style.display = "none"// hiding subquestion text
   let Description =  document.getElementById("surveyInfo") 
   let placeholder = "Thank you for filling out our survey"
   Description.innerHTML = placeholder;
