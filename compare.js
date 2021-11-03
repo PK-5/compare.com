@@ -1,5 +1,13 @@
 
- //swap
+  // Defining Question, questionsList and Answer
+  const Question = document.querySelector("#question");
+  const questionList = ["What is your name ? " , "  hi, is there are product we are missing? ", "  , we will be sure to look into adding that "]
+  const Answer = document.querySelector("#answer")
+  const Yes = document.querySelector("#yes")
+  const No = document.querySelector("#no")
+  const Next = document.querySelector("#next")
+  
+  //swap
 
 const Change= document.querySelector("#change"); //defining the variable Swap
 let time = 0; // defining time   
@@ -43,14 +51,7 @@ function showSlides(n) { //writing out the function showSlides
 
 //Popup survey
 
-  // Defining Question, questionsList and Answer
-  const Question = document.querySelector("#question");
  
-  const questionList = ["What is your name ? " , "  hi, is there are product we are missing? ", "  , we will be sure to look into adding that "]
-  const Answer = document.querySelector("#answer")
-  const Yes = document.querySelector("#yes")
-  const No = document.querySelector("#no")
-  const Next = document.querySelector("#next")
  
   
     
