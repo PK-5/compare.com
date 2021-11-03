@@ -565,13 +565,13 @@ background:#f1f2f7;
 /* Popup survey */
 
 .chat-popup{
-  background-color: rgb(167, 104, 79);
+  background-color:#dab88f;
   
  }
 
   .open-button {
-    background-color: rgb(167, 104, 79);
-    color: white;
+    background-color:  #dab88f;
+    color: black;
     padding:16px 20px;
     border: none;
     cursor: pointer;
