@@ -12,17 +12,24 @@
 const Change= document.querySelector("#change"); //defining the variable Swap
 let time = 0; // defining time   
 let imagelist = ["alt1.jpg","alt2.jpg"] //list of src
-for (let i=0; i<imagelist.length; i++) {// move number up by one 
+for (let i=0; i<imagelist.length; i++ ){ // move number up by one 
  task(i); 
- }
+ } 
+ if (i>1){i=0};
+
+ 
+  
+ 
+
  function task(i) {
    setTimeout(function() {
      Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
-   }, 2000 * i);// when to change CHANGE BACK TO 24 HOURS AFTER TESTS
-   }
- 
-  //Common products slideshow
+   }, 2000 * i);// when to change CHANGE BACK TO 24 HOURS AFTER TESTS  
+  }
+
+
+     //Common products slideshow
   
 var slideIndex = 1; //defining the varaible slide index
 showSlides(slideIndex);
@@ -54,20 +61,13 @@ function showSlides(n) { //writing out the function showSlides
   
     
   function openForm() { // opens the survey
-      document.getElementById("myForm").style.display = "block"; //shows the survey
+      let myForm = document.getElementById("myForm") // creates variable called myForm
+      myForm.style.display = "block"; //shows the survey
       Yes.style.display = "none"; // hiding Yes button 
       No.style.display = "none";// hiding No button 
-      Subquestion.style.display = "none"// hiding subquestion text
-      Question.innerHTML = "What is your name ? " //stating where the text should be
-      
-
-      
-  
+      Subquestion.style.display = "none";// hiding subquestion text
+      Question.innerHTML = "What is your name ? " ;//stating where the text should be 
   }
-    function closeForm() { // closes the form or hides its
-      document.getElementById("myForm").style.display = "none"; //hiding the survey 
-      document.getElementById("survey").style.display = "none";// hiding the survey
-    }
   
 
   
@@ -77,7 +77,7 @@ function showSlides(n) { //writing out the function showSlides
   
  function sFunction(){ //telling the function sFunction what to do 
   var user = document.querySelector("#answer").value; //creating a variable called user
-  Question.innerHTML = "Hi " + user + ", is there are product we are missing?" //stating where the text should be
+  Question.innerHTML = "Hi   " + user + ", is there are product we are missing?" //stating where the text should be
   Yes.style.display = "block"; // showing Yes button
   No.style.display = "block"; // showing No button
   Answer.style.display = "none"; // hide Answer element
@@ -140,7 +140,10 @@ function lFunction() {
 }
 
 function fFunction() {
-  Question.innerHTML = "Thank you for your feedback" // showing text to display and where to display it
+  let myForm = document.getElementById("myForm") // creates variable called myForm
+  myForm.style.display = "none"; //hides the survey the survey
+  let Survey = document.getElementById("survey")
+  Survey.style.display = "none" // hides survey
   Answer.style.display = "none"; // hiding Answer element
   Next.style.display = "none"; // hding Next element
   Subquestion.style.display = "none"// hiding subquestion text
