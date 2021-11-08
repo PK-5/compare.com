@@ -15,7 +15,7 @@ let imagelist = ["alt1.jpg","alt2.jpg"] //list of src
 for (let i=0; i<imagelist.length; i++ ){ // move number up by one 
  task(i); 
  } 
- if (i>1){i=0};
+
 
  
   
@@ -25,7 +25,7 @@ for (let i=0; i<imagelist.length; i++ ){ // move number up by one
    setTimeout(function() {
      Change.src = (imagelist[time]);// telling where to show the text
      time +=1; // making time go up by one
-   }, 2000 * i);// when to change CHANGE BACK TO 24 HOURS AFTER TESTS  
+   }, 86400000 * i);// when to change CHANGE BACK TO 24 HOURS AFTER TESTS  
   }
 
 
@@ -65,7 +65,7 @@ function showSlides(n) { //writing out the function showSlides
       myForm.style.display = "block"; //shows the survey
       Yes.style.display = "none"; // hiding Yes button 
       No.style.display = "none";// hiding No button 
-      Subquestion.style.display = "none";// hiding subquestion text
+      Subquestion.style.display = "none";// hiding subquestion textscience 
       Question.innerHTML = "What is your name ? " ;//stating where the text should be 
   }
   
